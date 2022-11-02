@@ -1,16 +1,37 @@
 #include "main.h"
 
-int find_sqrt(int num, int root);
-int _sqrt_recursion(int n);
+/**
+ * * factor - find factors of n
+ * * @n: passed in number to check for square roots
+ * * @f: incrementing number which is checked against n
+ * * Return: moving f through the function until other returns are true
+ */
+
+int factor(int n, int f)
+{
+
+	if ((f * f) == n)
+		return (f);
+
+	if (f > (n / f))
+		return (-1);
+
+	return (factor(n, (f + 1)));
+}
 
 /**
- * find_sqrt - finds the natural square root of an inputted number.
- * @num: The number to check for square roots
- * @root: The root to be tested.
- * Return: If the number has a natural square root - the square root
- *	   If the number does not have a natural square root - -1.
+ * * _sqrt_recursion - find square root through recursion
+ * * @n: number to check for square roots
+ * * Return: pass n and 1 into factor function, unless n is negative, 0, or 1
  */
-int find_sqrt(int num, int root)
+
+int _sqrt_recursion(int n)
 {
-	if ((root * root) == num)
-		return (root);
+
+	if (n <= 0)
+		return (-1);
+	if (n == 1)
+		return (1);
+
+	return (factor(n, 1));
+}
