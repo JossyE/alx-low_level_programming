@@ -9,6 +9,7 @@
 
 int factor(int n, int f)
 {
+
 	if ((f * f) == n)
 		return (f);
 
