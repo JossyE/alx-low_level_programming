@@ -1,18 +1,38 @@
+
+
 #include "main.h"
 
-int is_divisible(int num, int div);
-int is_primint is_prime_number(int n);e_number(int n);
+/**
+ *  * * factor - check if all numbers between 1 and n are factors of n
+ *   * * @n: number to check for factors of
+ *    * * @check: number that starts at n - 1, decrements to 1
+ *     * *
+ *      * * Return: 1 if no factor is found, 0 if factor is found
+ */
+
+int factor(int n, int check)
+{
+	if (check == 1)
+		return (1);
+	if (n % check == 0)
+		return (0);
+
+	return (factor(n, (check - 1)));
+}
 
 /**
- * is_divisible - checks if a number is divisible.
- * @num: The number to be checked.
- * @div: The divisor.
- *
- * Return: If the number is divisible - 0.
- *         If the number is not divisible - 1.
+ *  * * is_prime_number - check if n is a prime number
+ *   * * @n: number to check
+ *    * *
+ *     * * Return: pass values into factor
  */
-int is_divisible(int num, int div)
+
+int is_prime_number(int n)
 {
-    if (num % div == 0)
-        return (0);
+	int check = (n - 1);
+
+	if (n <= 1)
+		return (0);
+
+	return (factor(n, check));
 }
