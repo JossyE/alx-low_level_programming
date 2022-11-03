@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *  * * strend - find end of string
- *   * * @s: string to find length of
- *    * * Return: s + 1 until end of string, unless s is 0
+ * * strend - find end of string
+ * * @s: string to find length of
+ * * Return: s + 1 until end of string, unless s is 0
  */
 
 int strend(char *s)
