@@ -31,10 +31,10 @@ int main(int argc, char *argv[])
 	for (i = 0; i < 5 && num >= 0; i++)
 	{
 		while (num >= coinage[i])
-					{
-						cents++;
-						num -= coinage[i];
-					}
+		{
+			cents++;
+			num -= coinage[i];
+		}
 	}
 
 	printf("%d\n", cents);
