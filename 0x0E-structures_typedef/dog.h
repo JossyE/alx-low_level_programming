@@ -3,10 +3,9 @@
 
 /**
  * struct dog - struct dog
- * @name: name
+ * @name: atribute pointer to char name's dog
  * @age: age
- * @owner: owner
- * Description: This struct is for dog
+ * @owner: atribute pointer to char owner'sdog
  */
 
 struct dog
