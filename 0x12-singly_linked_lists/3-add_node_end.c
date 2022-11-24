@@ -3,7 +3,7 @@
 /**
  * str_len - size de un string
  * @s: string
- * Return:len   
+ * Return:len
  */
 int str_len(const char *s)
 {
